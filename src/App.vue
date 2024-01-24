@@ -1,22 +1,30 @@
-<script setup lang="ts"></script>
-
 <template>
-  <div>
+  <div class="header">
+    <pageHeader />
+  </div>
+  <div class="body">
     <router-view />
   </div>
+  <div class="footer">footer</div>
 </template>
 
+<script setup lang="ts">
+import pageHeader from "./components/header.vue";
+</script>
+
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.header {
+  background-color: white;
+  width: 100vw;
+  min-height: 5rem;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.body {
+  min-height: calc(100vh - 5rem - 15rem);
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+.footer {
+  background-color: white;
+  min-height: 15rem;
 }
 </style>
